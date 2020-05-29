@@ -1,0 +1,15 @@
+<h1>Merchant Dashboard</h1>
+<h3>Merchant Name: <i>Amazon</i></h3>
+<div class="chart-wrapper">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>
+
+<input type="submit" value="Update" (click)="updateMerchantContract()" />
