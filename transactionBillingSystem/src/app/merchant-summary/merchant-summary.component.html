@@ -1,28 +1,30 @@
-<h1>Merchant Summary Page</h1>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Merchant Name</th>
-      <th>Country</th>
-      <th>Account Number</th>
-      <th>Total Transaction Bill</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let d of data">
-      <td><input type="radio" /></td>
-      <td><a routerLink="/merchantDashboard">{{d.merchantDescription}}</a></td>
-      <td>{{d.country}}</td>
-      <td>{{d.merchantAaccountNumber}}</td>
-      <td>{{d.merchantId}}</td>
-    </tr>
-  </tbody>
-</table>
-<input type="radio" value="payout" name="transaction_to_do" /> Payment
-<input type="radio" value="payout" name="transaction_to_do" /> Payout
-<input type="radio" value="payout" name="transaction_to_do" /> Refund
-<input type="radio" value="payout" name="transaction_to_do" /> Cancel
-<div>
-    <input type="submit" value="Submit" (click)="transactionsToDo()" />
+<div class="container">
+  <h1>Merchant Summary Page</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Merchant Name</th>
+        <th>Country</th>
+        <th>Account Number</th>
+        <th>Total Transaction Bill</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data">
+        <td><input type="radio" /></td>
+        <td><a routerLink="/merchantDashboard">{{d.merchantDescription}}</a></td>
+        <td>{{d.country}}</td>
+        <td>{{d.merchantAaccountNumber}}</td>
+        <td>{{d.merchantId}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="radio" value="payout" name="transaction_to_do" /> Payment
+  <input type="radio" value="payout" name="transaction_to_do" /> Payout
+  <input type="radio" value="payout" name="transaction_to_do" /> Refund
+  <input type="radio" value="payout" name="transaction_to_do" /> Cancel
+  <div>
+    <input type="submit" class="btn btn-primary" value="Submit" (click)="transactionsToDo()" />
+  </div>
 </div>

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MerchantSummaryComponent } from './merchant-summary/merchant-summary.component';
 import { MerchantDashboardComponent } from './merchant-dashboard/merchant-dashboard.component';
 import { MerchantContractComponent } from './merchant-contract/merchant-contract.component';
+import { GenerateInvoiceComponent } from './generate-invoice/generate-invoice.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'merchantSumary', component: MerchantSummaryComponent },  
   { path: 'merchantDashboard', component: MerchantDashboardComponent },  
   { path: 'merchantContract', component: MerchantContractComponent },  
+  { path: 'generateInvoice', component: GenerateInvoiceComponent }  
 ];  
 
 @NgModule({

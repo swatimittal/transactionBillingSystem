@@ -1,6 +1,7 @@
+<div class="container">
 <h1>Merchant Dashboard</h1>
 
-<div class="row content-wrapper">
+<div class="row">
     <div class="row col-sm-12">
         <div class="col-md-6">
             <h4>Merchant Name: <i>{{merchantDetails.merchantName}}</i></h4>
@@ -29,8 +30,13 @@
         <div class="col-md-6">
             <h4>Total Transaction Bill Summary: <span>0.00</span></h4>
         </div>
+    </div>
+    <div class="row col-sm-12">
         <div class="col-md-6">
-            <button class="btn btn-primary" (click)=getInvoiceDetails()>Get Invoice Details</button>
+            <button class="btn btn-primary" (click)=updateMerchantContract()>Merchant Contract</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" (click)=generateInvoice()>Generate Invoice</button>
         </div>
     </div>
 </div>
@@ -39,5 +45,4 @@
         [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
     </canvas>
 </div>
-
-<input type="submit" value="Update" (click)="updateMerchantContract()" />
+</div>
