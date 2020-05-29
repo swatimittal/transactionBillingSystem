@@ -9,30 +9,35 @@ import { GenerateInvoiceComponent } from './generate-invoice/generate-invoice.co
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
-const routes: Routes = [  
-  {path: '', redirectTo: '/merchantSumary', pathMatch: 'full'},
-  { path: 'merchantSumary', component: MerchantSummaryComponent },  
-  { path: 'merchantDashboard', component: MerchantDashboardComponent },  
-  { path: 'merchantContract', component: MerchantContractComponent },  
-  { path: 'generateInvoice', component: GenerateInvoiceComponent }  
-];  
+const routes: Routes = [
+    { path: '', redirectTo: '/merchantSumary', pathMatch: 'full' },
+    { path: 'merchantSumary', component: MerchantSummaryComponent },
+    { path: 'merchantDashboard', component: MerchantDashboardComponent },
+    { path: 'merchantContract', component: MerchantContractComponent },
+    { path: 'generateInvoice', component: GenerateInvoiceComponent }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MerchantSummaryComponent,
-    MerchantDashboardComponent,
-    MerchantContractComponent
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes),
-    ChartsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MerchantSummaryComponent,
+        MerchantDashboardComponent,
+        MerchantContractComponent,
+        HeaderComponent,
+        GenerateInvoiceComponent,
+        FooterComponent
+    ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(routes),
+        ChartsModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
