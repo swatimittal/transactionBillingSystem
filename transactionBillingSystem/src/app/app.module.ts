@@ -7,6 +7,8 @@ import { MerchantDashboardComponent } from './merchant-dashboard/merchant-dashbo
 import { MerchantContractComponent } from './merchant-contract/merchant-contract.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [  
   {path: '', redirectTo: '/merchantSumary', pathMatch: 'full'},
@@ -25,7 +27,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
