@@ -12,6 +12,9 @@ export class GenerateInvoiceComponent implements OnInit {
         merchantAccountNumber: '111000',
         invoiceDate: '20 May 2020 12:23:00',
         taxInvoiceNumber: 'txn12345',
+        subTotal: '1122',
+        vatAmount: '232',
+        totalAmount: '56478',
         transactionSummaryDetails: [
             {
                 transactionId: 'txn1234',
@@ -83,25 +86,25 @@ export class GenerateInvoiceComponent implements OnInit {
         subscriptionDetails: [
             {
                 subscriptionName: 'Scheme 1',
-                number: 1,
+                number: '1',
                 currency: 'GBP',
                 amount: '1223'
             },
             {
                 subscriptionName: 'Payments',
-                number: 1,
+                number: '1',
                 currency: 'GBP',
                 amount: '1223'
             },
             {
                 subscriptionName: 'Charge backs',
-                number: 1,
+                number: '1',
                 currency: 'GBP',
                 amount: '1223'
             },
             {
                 subscriptionName: 'Refunds',
-                number: 1,
+                number: '1',
                 currency: 'GBP',
                 amount: '1223'
             }
@@ -111,5 +114,4 @@ export class GenerateInvoiceComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
 }
