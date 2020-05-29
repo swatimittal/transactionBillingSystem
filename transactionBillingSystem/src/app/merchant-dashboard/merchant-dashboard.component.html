@@ -1,14 +1,42 @@
 <h1>Merchant Dashboard</h1>
-<h3>Merchant Name: <i>Amazon</i></h3>
+
+<div class="row content-wrapper">
+    <div class="row col-sm-12">
+        <div class="col-md-6">
+            <h4>Merchant Name: <i>{{merchantDetails.merchantName}}</i></h4>
+        </div>
+        <div class="col-md-6">
+            <h4>Currency: <i>{{merchantDetails.currency}}</i></h4>
+        </div>
+    </div>
+    <div class="row col-sm-12">
+        <div class="col-md-6">
+            <h4>Merchant Domain: <i>{{merchantDetails.merchantDomain}}</i></h4>
+        </div>
+        <div class="col-md-6">
+            <h4>Country: <i>{{merchantDetails.country}}</i></h4>
+        </div>
+    </div>
+    <div class="row col-sm-12">
+        <div class="col-md-6">
+            <h4>Account Number: <i>{{merchantDetails.merchantAccountNumber}}</i></h4>
+        </div>
+        <div class="col-md-6">
+            <h4>Merchant Boarding Date: <i>{{merchantDetails.insertDate}}</i></h4>
+        </div>
+    </div>
+    <div class="row col-sm-12">
+        <div class="col-md-6">
+            <h4>Total Transaction Bill Summary: <span>0.00</span></h4>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" (click)=getInvoiceDetails()>Get Invoice Details</button>
+        </div>
+    </div>
+</div>
 <div class="chart-wrapper">
-    <canvas baseChart 
-        [datasets]="lineChartData" 
-        [labels]="lineChartLabels" 
-        [options]="lineChartOptions"
-        [colors]="lineChartColors" 
-        [legend]="lineChartLegend" 
-        [chartType]="lineChartType" 
-        [plugins]="lineChartPlugins">
+    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
     </canvas>
 </div>
 
