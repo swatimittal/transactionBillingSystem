@@ -1,0 +1,47 @@
+.header-section {
+    background-color: #edeef0;
+    height: 80px;
+    padding: 10px;
+}
+
+.page-logo {
+    float: left;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+
+.page-description {
+    float: left;
+    color: #08b070;
+    font-size: 40px;
+    /* padding: 10px; */
+}
+
+.add-section {
+    float: right;
+}
+
+.title-wrapper {
+
+    padding: 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    color: #f6bd22;
+}
+
+.btn {
+    background-color: #08b070;
+    color: white;
+    border-radius: 3px;
+    border-width: 0;
+    padding: 10px;
+    font-size: 15px;
+    margin: 30px 10px;
+}

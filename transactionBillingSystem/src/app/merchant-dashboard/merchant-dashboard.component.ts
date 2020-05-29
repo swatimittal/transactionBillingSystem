@@ -55,7 +55,7 @@ export class MerchantDashboardComponent implements OnInit {
     /**
      * method to fetch invoice details
      */
-    getInvoiceDetails() {
-        console.log('fetch invoice details');
+    generateInvoice() {
+        this.router.navigateByUrl('/generateInvoice');
     }
 }
