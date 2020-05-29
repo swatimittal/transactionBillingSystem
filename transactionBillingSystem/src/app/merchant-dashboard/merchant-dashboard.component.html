@@ -31,6 +31,7 @@
         </div>
         <div class="col-md-6">
             <button class="btn btn-primary" (click)=getInvoiceDetails()>Get Invoice Details</button>
+            <button class="btn btn-primary" (click)=updateMerchantContract()>Update Merchant Details</button>
         </div>
     </div>
 </div>
@@ -39,5 +40,3 @@
         [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
     </canvas>
 </div>
-
-<input type="submit" value="Update" (click)="updateMerchantContract()" />
