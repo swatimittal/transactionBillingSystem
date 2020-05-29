@@ -1,3 +1,17 @@
 h1 {
     text-align: center;
 }
+
+.content-wrapper {
+    overflow: hidden;
+    padding: 3% 10%;
+}
+
+.chart-wrapper {
+    padding: 3% 10%;
+}
+
+canvas {
+    max-height: 310px;
+    max-width: 750px;
+}
