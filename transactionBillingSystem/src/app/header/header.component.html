@@ -2,11 +2,14 @@
 <header>
     <div class="header-section">
         <div class="col-auto page-logo">
-            <img tabindex="0" (click)="redirect('')" src="../../assets/images/home-icon.png" [attr.aria-label]="'1-tab'"
+            <img tabindex="0" (click)="redirect()" src="../../assets/images/home-icon.png" [attr.aria-label]="'1-tab'"
                 alt="'1-tab'" class="im-cursor-default" role="img" />
         </div>
         <div class="col-auto page-description">
             Merchant Rate Management System
+        </div>
+        <div class="add-section">
+            <button *ngIf="backPage" class="btn" id="quickAddButton" (click)="redirect()">Back</button>
         </div>
     </div>
     <div class="title-wrapper">

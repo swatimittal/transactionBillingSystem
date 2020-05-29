@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+h4 {
+    font-size: 1.2rem;
+}
+
 .content-wrapper {
     overflow: hidden;
     padding: 3% 10%;
@@ -24,4 +28,13 @@ canvas {
     padding: 10px;
     font-size: 15px;
     margin: 0 10px;
+}
+
+.total-bill-wrapper {
+    margin: 15px 0;
+}
+
+.total-bill-wrapper>div:first-child {
+    padding: 5px 0;
+    vertical-align: middle;
 }

@@ -1,0 +1,25 @@
+.transaction-table-header {
+    margin: 20px 0;
+}
+
+.transaction-table-header > h3 {
+    color: #f6bd22;
+}
+
+thead {
+    background-color: lightgray;
+}
+
+th {
+    padding: 6px 8px;
+    font-size: 16px;
+}
+
+td {
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+.subscription-details {
+    margin: 20px 0 0 0;
+}

@@ -28,3 +28,12 @@ tr td:first-child {
     font-size: 15px;
     margin: 0 10px;
 }
+
+.option-radio-wrapper {
+    padding: 20px;
+}
+
+.option-radio-wrapper>div {
+    margin: 20px;
+    display: inline-block;
+}

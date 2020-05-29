@@ -1,5 +1,80 @@
-<app-header [pageTitle]="'Invoice Details'"></app-header>
+<app-header [pageTitle]="'Invoice Details'" [backPage]="'merchantDashboard'"></app-header>
 <div class="container">
-    <p>generate-invoice works!</p>
+    <div class="invoice-details-wrapper">
+        <div class="row col-sm-12">
+            <div class="col-md-6">
+                <h5>Merchant Name: <i>{{invoiceDetails.merchantName}}</i></h5>
+            </div>
+        </div>
+        <div class="row col-sm-12">
+            <div class="col-md-6">
+                <h5>Account Number: <i>{{invoiceDetails.merchantAccountNumber}}</i></h5>
+            </div>
+        </div>
+        <div class="row col-sm-12">
+            <div class="col-md-6">
+                <h5>Invoice Date: <i>{{invoiceDetails.invoiceDate}}</i></h5>
+            </div>
+        </div>
+        <div class="row col-sm-12">
+            <div class="col-md-6">
+                <h5>Transaction Invoice Number: <i>{{invoiceDetails.taxInvoiceNumber}}</i></h5>
+            </div>
+        </div>
+    </div>
+    <div class="subscription-details">
+        <div class="subscription-details-table">
+            <table>
+                <thead>
+                    <th>Subscription Fee</th>
+                    <th>Number</th>
+                    <th>Currency</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of invoiceDetails.subscriptionDetails">
+                        <td>{{item.subscriptionName}}</td>
+                        <td>{{item.number}}</td>
+                        <td>{{item.currency}}</td>
+                        <td>{{item.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="transaction-details">
+        <div class="transaction-table-header">
+            <h3>Transaction Summary Details</h3>
+        </div>
+        <div class="transaction-details-table">
+            <table>
+                <thead>
+                    <th>Transaction Id</th>
+                    <th>Transaction Type</th>
+                    <th>Card Scheme</th>
+                    <th>Card Type</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Transaction Status</th>
+                    <th>Pan Number</th>
+                    <th>Transaction Date</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of invoiceDetails.transactionSummaryDetails">
+                        <td>{{item.transactionId}}</td>
+                        <td>{{item.transactionType}}</td>
+                        <td>{{item.cardScheme}}</td>
+                        <td>{{item.cardType}}</td>
+                        <td>{{item.amount}}</td>
+                        <td>{{item.currency}}</td>
+                        <td>{{item.transactionStatus}}</td>
+                        <td>{{item.panNumber}}</td>
+                        <td>{{item.transactionDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <app-footer></app-footer>

@@ -13,7 +13,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let d of data">
-        <td><input type="radio" /></td>
+        <td><input type="radio" name="merchant-radio" /></td>
         <td><a routerLink="/merchantDashboard">{{d.merchantDescription}}</a></td>
         <td>{{d.country}}</td>
         <td>{{d.merchantAaccountNumber}}</td>
@@ -21,12 +21,22 @@
       </tr>
     </tbody>
   </table>
-  <input type="radio" value="payout" name="transaction_to_do" /> Payment
-  <input type="radio" value="payout" name="transaction_to_do" /> Payout
-  <input type="radio" value="payout" name="transaction_to_do" /> Refund
-  <input type="radio" value="payout" name="transaction_to_do" /> Cancel
+  <div class="option-radio-wrapper">
+    <div>
+      <input type="radio" value="payout" name="transaction_to_do" /> Payment
+    </div>
+    <div>
+      <input type="radio" value="payout" name="transaction_to_do" /> Payout
+    </div>
+    <div>
+      <input type="radio" value="payout" name="transaction_to_do" /> Refund
+    </div>
+    <div>
+      <input type="radio" value="payout" name="transaction_to_do" /> Cancel
+    </div>
+  </div>
   <div>
-    <input type="submit" class="btn btn-primary" value="Submit" (click)="transactionsToDo()" />
+    <button type="submit" class="btn" (click)="transactionsToDo()">Submit</button>
   </div>
 </div>
 <app-footer></app-footer>

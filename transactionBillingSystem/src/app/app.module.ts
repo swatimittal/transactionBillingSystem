@@ -14,8 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: '/merchantSumary', pathMatch: 'full' },
-    { path: 'merchantSumary', component: MerchantSummaryComponent },
+    { path: '', redirectTo: '/merchantSummary', pathMatch: 'full' },
+    { path: 'merchantSummary', component: MerchantSummaryComponent },
     { path: 'merchantDashboard', component: MerchantDashboardComponent },
     { path: 'merchantContract', component: MerchantContractComponent },
     { path: 'generateInvoice', component: GenerateInvoiceComponent }

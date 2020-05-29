@@ -10,19 +10,22 @@ export class HeaderComponent implements OnInit {
 
     /** input for showing page based title */
     @Input() pageTitle: string;
+    @Input() backPage: string;
 
     constructor(public router: Router) {
+        this.backPage = '';
         this.pageTitle = 'Merchant List';
     }
 
     ngOnInit() {
+        console.log(this.backPage);
     }
 
     /**
      * method to redirect to given page name
      * @param page page name
      */
-    redirect(page) {
-        this.router.navigate(['./' + page]);
+    redirect() {
+        this.router.navigate(['./' + this.backPage]);
     }
 }
