@@ -8,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class GenerateInvoiceComponent implements OnInit {
 
     invoiceDetails = {
+        merchant_id: '101',
         merchantName: 'Amazon',
-        merchantAccountNumber: '111000',
+        accountNumber: '111000',
         invoiceDate: '20 May 2020 12:23:00',
-        taxInvoiceNumber: 'txn12345',
+        invoiceNumber: 'txn12345',
+        schemeId: 101,
+        schemeCharges: 0,
         subTotal: '1122',
-        vatAmount: '232',
-        totalAmount: '56478',
-        transactionSummaryDetails: [
+        noOfPayments: 10,
+        noOfPayouts: 10,
+        noOfRefunds: 10,
+        noOfCancels: 10,
+        vatInPercentage: '232',
+        totalBillAmount: '56478',
+        TransactionDetails: [
             {
                 transactionId: 'txn1234',
                 transactionType: 'refund',

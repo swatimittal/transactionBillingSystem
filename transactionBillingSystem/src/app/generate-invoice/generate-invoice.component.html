@@ -8,7 +8,7 @@
         </div>
         <div class="row col-sm-12">
             <div class="col-md-6">
-                <h5>Account Number: <i>{{invoiceDetails.merchantAccountNumber}}</i></h5>
+                <h5>Account Number: <i>{{invoiceDetails.accountNumber}}</i></h5>
             </div>
         </div>
         <div class="row col-sm-12">
@@ -18,7 +18,7 @@
         </div>
         <div class="row col-sm-12">
             <div class="col-md-6">
-                <h5>Transaction Invoice Number: <i>{{invoiceDetails.taxInvoiceNumber}}</i></h5>
+                <h5>Transaction Invoice Number: <i>{{invoiceDetails.invoiceNumber}}</i></h5>
             </div>
         </div>
     </div>
@@ -47,12 +47,12 @@
                 <div> {{invoiceDetails.subTotal}}</div>
             </div>
             <div class="wrapper col-md-6">
-                <div> VAT @17.5%</div>
-                <div> {{invoiceDetails.vatAmount}}</div>
+                <div> VAT</div>
+                <div> {{invoiceDetails.vatInPercentage}}</div>
             </div>
             <div class="wrapper col-md-6">
                 <div> Total</div>
-                <div> {{invoiceDetails.totalAmount}}</div>
+                <div> {{invoiceDetails.totalBillAmount}}</div>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
                     <th>Transaction Date</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of invoiceDetails.transactionSummaryDetails">
+                    <tr *ngFor="let item of invoiceDetails.TransactionDetails">
                         <td>{{item.transactionId}}</td>
                         <td>{{item.transactionType}}</td>
                         <td>{{item.cardScheme}}</td>
